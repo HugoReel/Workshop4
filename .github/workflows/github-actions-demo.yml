@@ -16,4 +16,12 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  hello-world:
+    runs-on: ubuntu-latest
 
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Print Hello, GitHub Actions!
+      run: echo "Hello, GitHub Actions!"
