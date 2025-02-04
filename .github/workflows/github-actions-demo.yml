@@ -1,6 +1,6 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on: [push,pull_request]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -16,12 +16,3 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-  hello-world:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Print Hello, GitHub Actions!
-      run: echo "Hello, GitHub Actions!"
